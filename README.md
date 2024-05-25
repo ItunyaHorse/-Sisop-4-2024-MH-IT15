@@ -500,13 +500,13 @@ int  main(int  argc, char *argv[]){
 
 Seperti yang sudah disebutkan sebelumnya, dalam pembahasan kode ini, fungsi yang dibahas hanya fungsi yang berpengaruh terhadap soal. Dalam struct di atas, dapat dilihat terdapat banyak fungsi yang dibuat namun fungsi fungsi tersebut hanya digunakan sebagai pelengkap saja. Bagian ini mendefinisikan struktur fuse_operations yang berisi pointer ke berbagai fungsi yang mengimplementasikan operasi sistem file FUSE. Struktur ini kemudian digunakan dalam fungsi main untuk menginisialisasi dan menjalankan sistem file FUSE. Lalu, Dalam fungsi main, umask(0) digunakan untuk mengatur mask izin file sehingga file yang dibuat memiliki izin default yang penuh. Kemudian, fuse_main dipanggil dengan argumen argc, argv, &FUSE_oper, dan NULL, untuk memulai sistem file FUSE dengan operasi yang telah didefinisikan dalam struktur FUSE_oper.
 
-## Kesalahan yang dialami:
-### 1. File berulang yang terlalu banyak 
+### Kesalahan yang dialami:
+#### 1. File berulang yang terlalu banyak 
 
 ![Screenshot from 2024-05-19 00-04-26](https://github.com/ItunyaHorse/Sisop-4-2024-MH-IT15/assets/145765887/3bf3a4b5-1b8c-44ab-aca0-d6fa7bf35a91)
-### 2. File tergabung di direktori relics
+#### 2. File tergabung di direktori relics
 
 ![Screenshot from 2024-05-18 23-40-37](https://github.com/ItunyaHorse/Sisop-4-2024-MH-IT15/assets/145765887/d1a8c8e6-238e-4632-a83a-3148b9004dc1)
-### 3. Terlalu Penuh
+#### 3. Terlalu Penuh
 
 ![Screenshot from 2024-05-20 11-53-25](https://github.com/ItunyaHorse/Sisop-4-2024-MH-IT15/assets/145765887/7dd1faa7-8ff2-4ae3-b5db-083091c9ef75)
